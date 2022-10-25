@@ -2,7 +2,7 @@ import {config} from "dotenv";
 
 config()
 
-export const PORT = 8080
+export const PORT = process.env.PORT || 3000
 
 
 
