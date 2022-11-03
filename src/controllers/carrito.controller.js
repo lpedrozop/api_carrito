@@ -25,8 +25,7 @@ export const getcarrito_ind = async (req, res) => {
 
 export const updatecarrito = async (req, res) => {
     try{
-        const {id} = req.params
-        const {amount} = req.body
+        const {id,amount} = req.body
         const [result] = await pool.query('UPDATE inventario SET inventario.amount=(select SUM( amount - ?))  WHERE id = ?',
         [amount, id])
 
