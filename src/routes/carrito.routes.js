@@ -6,6 +6,6 @@ const router = Router()
 
 router.get('/carrito', getcarrito)
 router.get('/carrito/:id', getcarrito_ind)
-router.patch('/carrito/:id', updatecarrito)
+router.patch('/carrito', updatecarrito)
 
 export default router
